@@ -42,8 +42,12 @@ function showGreeting(message) { // 메세지 띄우는 메서드
 }
 
 $(function () {
+    $("form").on('submit', function (e) {
+        e.preventDefault();
+    });
     $("#connect").click(function () { connect(); });
     $("#disconnect").click(function () { disconnect(); });
     $("#send").click(function () { sendName(); });
 });
 
+connect();
